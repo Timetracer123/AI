@@ -11,9 +11,8 @@ file_path = "/Users/ham-uichan/Desktop/class/25-1/AI/iris.csv"
 
 if os.path.exists(file_path):
     df = pd.read_csv(file_path)
-    print("파일을 성공적으로 불러왔습니다.")
 else:
-    print("오류: 지정한 경로에 파일이 존재하지 않습니다.")
+    print("파일 없음")
 
 # 독립 변수(X)와 종속 변수(y) 지정
 X = df.iloc[:, :-1] 
