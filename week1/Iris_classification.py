@@ -7,12 +7,13 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
+# 붓꽃 데이터 CSV 파일 읽기
 file_path = "/Users/ham-uichan/Desktop/class/25-1/AI/iris.csv"
+df = pd.read_csv(file_path)
 
-if os.path.exists(file_path):
-    df = pd.read_csv(file_path)
-else:
-    print("파일 없음")
+# 데이터프레임 확인
+print(df.head())
+print(df.columns)
 
 # 독립 변수(X)와 종속 변수(y) 지정
 X = df.iloc[:, :-1] 
